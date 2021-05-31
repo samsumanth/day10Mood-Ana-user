@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+	class analyser
+	{
+		Scanner sc = new Scanner(System.in);
+		int mood;
+		public String AnalyseMood() {
+			System.out.println("WELCOME TO MOOD ANALYSER:");
+			System.out.println("press 1 if happy:\n press 2 if sad:");
+			mood = sc.nextInt();
+			
+			if (mood == 1)
+			{
+				System.out.println("Mood is happy:");
+				return "Happy";
+			}	
+			else
+			{	
+				System.out.println("Mood is sad:");
+				return "Sad";
+			}
+		}
+	}
+
+	public class MoodAnalyser {
+
+		public static void main(String[] args) 
+		{
+			Scanner sc = new Scanner(System.in);
+			analyser a1 = new analyser();
+			String str = a1.AnalyseMood();
+			System.out.println("Mood:"+str);
+		}
+	}
