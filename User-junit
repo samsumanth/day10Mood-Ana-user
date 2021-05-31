@@ -1,0 +1,119 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.Assert;
+import org.junit.jupiter.api.Test;
+
+class UserRegistrationTest {
+
+	@Test
+	public void userNameTest() 
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String user = "sam";
+		String user1 = "surya";
+		boolean isCheck = junit.userName(user);
+		if( user == "sam" )
+		{
+			Assert.assertEquals(true, isCheck);
+		}
+		
+		isCheck = junit.userName(user1);
+		
+		if(user1 == "surya")
+		{
+			Assert.assertEquals(true, isCheck);
+		}
+		
+	}
+	
+	@Test
+	public void passwordTest()
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String password = "abc@123";
+		String password1 = "xyz@143";
+		boolean correctPass = junit.password(password);
+		if( password == "abc@123" )
+		{
+			Assert.assertEquals(true, correctPass);
+		}
+		correctPass = junit.password(password1);
+		if ( password1 == "xyz@143" ) 
+		{
+			Assert.assertEquals(true, correctPass);
+		}
+	}
+	@Test
+	public void emailIDTest()
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String useremail = "samsuman8991@gmail.com";
+		String useremail1 = "surya111@gmail.co.in";
+		boolean isCorrectEmail = junit.emailID(useremail);
+		if ( useremail == "samsuman8991@gmail.com" ) 
+		{
+			Assert.assertEquals(true, isCorrectEmail);
+		}
+		isCorrectEmail = junit.emailID(useremail1);
+		if ( useremail1 == "surya111@gmail.co.in" ) 
+		{
+			Assert.assertEquals(true, isCorrectEmail);
+		}
+		
+	}
+	
+	@Test
+	public void contactNumTest()
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String contact = "6344444444";
+		String contact1 = "1234567890";
+		boolean isCorrectContact = junit.contactNum(contact);
+		if ( contact == "6344444444" ) 
+		{
+			Assert.assertEquals(true, isCorrectContact);
+		}
+		isCorrectContact = junit.contactNum(contact1);
+		if ( contact1 == "1234567890" ) 
+		{
+			Assert.assertEquals(true, isCorrectContact);
+		}
+		
+	}
+
+	@Test
+	public void ageTest()
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String age = "20";
+		String age1 = "5";
+		boolean isCorrect = junit.age(age);
+		if ( age == "20" ) 
+		{
+			Assert.assertEquals(true, isCorrect);
+		}
+		isCorrect = junit.age(age1);
+		if ( age1 == "5" ) 
+		{
+			Assert.assertEquals(true, isCorrect);
+		}
+	}
+	
+	@Test
+	public void cityTest()
+	{
+		VerificationPattern junit = new VerificationPattern();
+		String city = "Banglore";
+		String city1 = "delhi";
+		boolean isCorrectcity = junit.city(city);
+		if ( city == "Banglore" ) 
+		{
+			Assert.assertEquals(true, isCorrectcity);
+		}
+		isCorrectcity = junit.city(city1);
+		if ( city1 == "delhi" ) 
+		{
+			Assert.assertEquals(true, isCorrectcity);
+		}
+	}
+}
