@@ -1,0 +1,138 @@
+import java.util.regex.Pattern;
+
+	import java.util.Scanner;
+
+class VerificationPattern
+{
+		Scanner sc = new Scanner(System.in);
+		
+		private String userNameRE,passwordRE,emailRE,contactRE,ageRE,cityRE;
+
+	public boolean userName(String userName)
+	{
+		userName = "^[A-Za-z]*";
+		Pattern.compile(userNameRE);
+		
+	
+		if ( userName.matches(userNameRE) )
+		{
+			System.out.println("Name is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("Name is Invalid:");
+			return false;
+		}
+	}
+
+	public boolean password(String userPass)
+	{
+		passwordRE = "^[[^[0-9]]a-zA-Z]*[0-9[\\W]]{3,7}$";
+
+		Pattern pt = Pattern.compile(passwordRE);
+		if ( userPass.matches(passwordRE) )
+		{	
+			System.out.println("password is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("password is Invalid:");
+			return false;
+		}
+	}
+
+	public boolean emailID(String userEmail)
+	{
+		emailRE = "^[a-z0-9-\\+]+[\\.[a-z0-9]]*@[a-z]{1,7}[\\.[a-z]]*$";
+		
+		Pattern pt = Pattern.compile(emailRE);
+
+		if ( userEmail.matches(emailRE) )
+		{
+			System.out.println("email is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("email is Invalid:");
+			return false;
+		}
+	
+	}
+
+	public boolean contactNum(String contact)
+	{
+		contactRE = "^[7-9]{1}[0-9]{9}$";
+
+		Pattern pt = Pattern.compile(contactRE);
+
+		if ( contact.matches(contactRE) )
+		{
+			System.out.println("contact number is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("contact is Invalid:");
+			return false;
+		}
+		
+	}
+
+	public boolean age(String age)
+	{
+		ageRE = "^[0-9]{0,3}$";
+
+		Pattern pt = Pattern.compile(ageRE);
+
+		if ( age.matches(ageRE) )
+		{
+			System.out.println("age is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("age is Invalid:");
+			return false;
+		}
+		
+	}
+
+	public boolean city(String city)
+	{
+		cityRE = "^[a-zA-Z]{1,13}$";
+
+		Pattern pt = Pattern.compile(cityRE);
+
+		if ( city.matches(cityRE) )
+		{
+			System.out.println("city name is valid:");
+			return true;
+		}
+		else
+		{
+			System.out.println("city is Invalid:");
+			return false;
+		}
+		
+	}
+}
+
+public class UserRegistration 
+{
+
+	public static void main(String[] args) 
+	{
+		VerificationPattern v1 = new VerificationPattern();
+		v1.userName("sam");
+		v1.password("abc@123");
+		v1.emailID("samsuman8991@gmail.com.in");
+		v1.contactNum("6344444444");
+		v1.age("20");
+		v1.city("Banglore");
+
+	}
+
+}
