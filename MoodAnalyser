@@ -1,6 +1,6 @@
-import java.util.Scanner;
+	import java.util.Scanner;
 
-	class analyser
+	class Analyser
 	{
 		Scanner sc = new Scanner(System.in);
 		int mood;
@@ -27,7 +27,7 @@ import java.util.Scanner;
 		public static void main(String[] args) 
 		{
 			Scanner sc = new Scanner(System.in);
-			analyser a1 = new analyser();
+			Analyser a1 = new Analyser();
 			String str = a1.AnalyseMood();
 			System.out.println("Mood:"+str);
 		}
